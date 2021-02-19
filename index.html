@@ -89,6 +89,35 @@ function updateClock ()
       <div class="jumbotron">
         <h1>Hello CSG</h1>
         <p>Is it me you're looking for?</p>
+
+<script type="text/javascript">
+
+        const input = [
+  { foo: 'f', bar: 'b' },
+  { foo: 'ff', bar: 'bb' },
+  { foo: 'fff', bar: 'bbb' },
+  { foo: 'f', bar: 'b' },
+];
+const table = document.body.appendChild(document.createElement('table'));
+const thead = table.appendChild(document.createElement('thead'));
+const tr = thead.appendChild(document.createElement('tr'));
+const columnTexts = Object.keys(input[0]);
+columnTexts.forEach((columnText) => {
+  tr.appendChild(document.createElement('td'))
+    .textContent = columnText;
+});
+const tbody = table.appendChild(document.createElement('tbody'));
+input.forEach((item) => {
+  const tr = tbody.appendChild(document.createElement('tr'));
+  const values = Object.values(item);
+  values.forEach(value => {
+    tr.appendChild(document.createElement('td'))
+      .textContent = value;
+  });
+});
+</script>
+
+
       </div>
       <hr/>
       <div class="footer">
